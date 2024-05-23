@@ -1,0 +1,29 @@
+Vilalge
+Upgrade village to progress through ages
+Where you can build living quarters to get more workers to place in skills
+Progression Order Chat GPT help
+Certainly! If you are creating a game that starts in the medieval period and progresses through subsequent stages of human civilization, here’s a suggested list of stages in chronological order:
+
+Wood Cutting
+Cut wood to upgrade village building and make new/more buildings
+Progression could be
+Basic Axe - upgrade these through black smith with ores from mining
+After upgrading village you can get two man saws that speed it up more
+Then more advanced later but that will take time (Industrial revolution)
+
+Mining
+Pickaxes at first to get ores. The more you mine the further down the mine goes and the more ores unlock
+can stay at certain location to get more of a certain type of ores
+Gem eventually but further down. Will hit a block that industiral revolution will need to be unloicked to get explosives
+Fire-Setting: Ancient civilizations used fire-setting, where fires were lit against rock faces and then 
+quenched with water to fracture the rock, making it easier to extract ores. Could be an intresting 
+
+Leatherworking
+Used wood and hide from animals to make tools and supplies for village
+Also makes bows, maybe arrows as well unless i want a fletcher 
+Leather armor as well. Maybe some armor can help in certain professions
+Just basic crafting recipes
+
+Blacksmith
+Use items mined from mining to make basic metal tools
+Progression 

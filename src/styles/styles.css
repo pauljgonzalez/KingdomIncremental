@@ -1,3 +1,120 @@
-*{
-    background-color: lightcoral;
+@font-face {
+    font-family: 'kingthings_exeterregular';
+    src: url('Kingthings_Exeter-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+:root {
+    --button-background-color: #33345E;
+    --font-color:#FAEBD7;
+    --background-color:#23243B;
+    --padding-width-main-screen:clamp(10px,2vw,100px);
+    }
+body{
+    margin: 0;
+    height: 100vh;
+    font-family: 'kingthings_exeterregular';
+    
+}
+.game-screen{
+    display: grid;
+    grid-template-columns: minmax(50px,125px) auto;
+    grid-template-rows: 1fr;
+    height: 100%;
+}
+.game-screen__skills{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    background-color:  var(--background-color);
+    min-width: 100px;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    grid-area: 1 / 1 / 2 / 2;
+}
+.skills__header{
+    grid-area: 1 / 1 / 2 / 2;
+    width: 50%;
+    background-color:  var(--background-color);
+    color: var(--font-color);
+    font-size: clamp(20px,5vw,30px)
+}
+.skills__individual{
+    grid-area: 2 / 1 / 3 / 2;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 80vh;
+    width: 100%;
+}
+.skills__individual::-webkit-scrollbar {
+    display: none;
+  }
+  .skill{
+    background-color:  var(--background-color);
+    text-align: center;
+    color: var(--font-color);
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: clamp(15px,2vw,18px);
+    padding: 2px;
+    cursor: pointer;
+}
+.skills__settings{
+    grid-area: 3 / 1 / 4 / 2;
+    background-color:  var(--background-color);
+    color: var(--font-color);
+    width: 100%;
+    cursor: pointer;
+}
+.game-screen__main-screen{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 1fr;
+    background-color:  var(--background-color);
+}
+.main-screen__current-skill{
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    grid-template-columns: 75px 65%;
+    grid-template-rows: 50% 50%;
+    border-width: 10px var(--padding-width-main-screen);
+    border-style: solid;
+    border-color: #33345E;
+    color: var(--font-color);
+    align-items: center;
+}
+.current-skill__image{
+    grid-area: 1 / 1 / 3 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.current-skill__name{
+    grid-area: 1 / 2 / 2 / 3; 
+    font-size: clamp(20px,5vw,30px)
+}
+.current-skill__description{
+    font-size: clamp(9px,1vw,20px);
+}
+
+.image__icon{
+    object-fit: contain;
+ 
+ }
+.main-screen__info{
+    grid-area: 1 / 2 / 2 / 3;
+    color: var(--font-color);
+    padding: 1vh;
+    box-sizing: border-box;
+    grid-area: 2 / 1 / 3 / 2;
+    background-color:  var(--background-color);
+    border: var(--padding-width-main-screen) solid #33345E;
+}
+

@@ -1,7 +1,3 @@
-# Template
-This is a template to use for new repos
-Has bundling setup and css from webpack.
-Webpack commands
-- npm run build
-- npm run watchnpm init @eslint/config@latest
-- npm run lint:fix
+#Kingdoms Incremental
+This is my attempt at making an incremental game. I want it to be based about buiilding up a kingdom. Instead of
+prestiging the kingdom I want to prestige the skills individually so the user can specalize how they want

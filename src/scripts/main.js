@@ -1,7 +1,7 @@
-import { test } from './test.js';
+import icon from '../images/placeholder_images/village.png';
+import '../styles/styles.css';
+import { addEventsToSkillsList } from './skills/addEventToSkills';
 
-console.log('this is from main');
+document.querySelector('.image__icon').src = icon;
 
-test();
-
-console.log('test');
+addEventsToSkillsList();
