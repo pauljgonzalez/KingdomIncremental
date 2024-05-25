@@ -1,0 +1,60 @@
+import { villagePNG } from '../importExportImages/importExportImages';
+
+// Function to create a modal with upgrades
+function createModal(skillName, upgrades) {
+  // Create modal elements
+  const modal = document.createElement('div');
+  modal.classList.add('modal');
+  const modalContent = document.createElement('div');
+  modalContent.classList.add('modal-content');
+  const closeBtn = document.createElement('span');
+  closeBtn.classList.add('close');
+  closeBtn.innerHTML = '&times;';
+  const skillInfo = document.createElement('p');
+  skillInfo.textContent = `This is ${skillName} modal!`;
+
+  // Append elements
+  modalContent.appendChild(closeBtn);
+  modalContent.appendChild(skillInfo);
+
+  // Create upgrade list
+  if (upgrades && upgrades.length > 0) {
+    const upgradeList = document.createElement('ul');
+    upgradeList.classList.add('upgrade-list');
+    upgrades.forEach((upgrade) => {
+      const upgradeItem = document.createElement('li');
+      upgradeItem.textContent = upgrade;
+      upgradeList.appendChild(upgradeItem);
+    });
+    modalContent.appendChild(upgradeList);
+  }
+
+  modal.appendChild(modalContent);
+  document.body.appendChild(modal);
+
+  // Event listener for close button
+  closeBtn.addEventListener('click', () => {
+    document.body.removeChild(modal); // Remove the modal from the DOM
+  });
+
+  return modal;
+}
+
+// Function to open the modal
+function openModal(modal) {
+  modal.style.display = 'block';
+}
+
+// Event listeners for each skill button
+const skillButtons = document.querySelectorAll('.skill-btn');
+skillButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const skillName = button.textContent;
+    const upgrades = []; // Define upgrades for each skill as needed
+    const modal = createModal(skillName, upgrades);
+    openModal(modal);
+  });
+});
+
+// this is going to be awful on button click call other scripts located in their respective folders
+

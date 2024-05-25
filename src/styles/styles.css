@@ -3,12 +3,14 @@
     src: url('Kingthings_Exeter-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-size-large:clamp(20px,5vw,30px);
 }
 :root {
     --button-background-color: #33345E;
     --font-color:#FAEBD7;
     --background-color:#23243B;
     --padding-width-main-screen:clamp(10px,2vw,100px);
+    --font-size-large:clamp(20px,5vw,30px);
     }
 body{
     margin: 0;
@@ -40,7 +42,7 @@ body{
     width: 50%;
     background-color:  var(--background-color);
     color: var(--font-color);
-    font-size: clamp(20px,5vw,30px)
+    font-size: var(--font-size-large)
 }
 .skills__individual{
     grid-area: 2 / 1 / 3 / 2;
@@ -101,20 +103,135 @@ body{
     font-size: clamp(20px,5vw,30px)
 }
 .current-skill__description{
-    font-size: clamp(9px,1vw,20px);
+    font-size: clamp(9px,3vw,20px);
 }
-
-.image__icon{
+.current-skill__icon{
     object-fit: contain;
- 
+ }
+ .main-screen__container{
+    border: var(--padding-width-main-screen) solid #33345E;
  }
 .main-screen__info{
-    grid-area: 1 / 2 / 2 / 3;
     color: var(--font-color);
     padding: 1vh;
     box-sizing: border-box;
     grid-area: 2 / 1 / 3 / 2;
     background-color:  var(--background-color);
-    border: var(--padding-width-main-screen) solid #33345E;
+    
+    height: 100%;
 }
+.main-screen__info--village{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+.village__village{
+    grid-area: 4 / 4 / 5 / 5; 
+    content: Village;
+}
+.village-card__image--village{
+    content:url("../images/icons/village.png");
+}
+.village__woodcutting{
+    grid-area: 2 / 2 / 3 / 3;
+}
+.village-card__image--woodcutting{
+    content:url("../images/icons/woodcutting.png");
+}
+.village__mining{
+    grid-area: 2 / 4 / 3 / 5; 
+}
+.village-card__image--mining{
+    content:url("../images/icons/mining.png");
+}
+.village__farming{
+    grid-area: 2 / 6 / 3 / 7;
+}
+.village-card__image--farming{
+    content:url("../images/icons/farming.png");
+}
+.village__crafting{
+    grid-area: 4 / 2 / 5 / 3;
+}
+.village-card__image--crafting{
+    content:url("../images/icons/crafting.png");
+}
+.village__hunting{
+    grid-area: 4 / 6 / 5 / 7;
+}
+.village-card__image--hunting{
+    content:url("../images/icons/hunting.png");
+}
+.village__leather-working{
+    grid-area: 6 / 2 / 7 / 3;
+}
+.village-card__image--leather-working{
+    content:url("../images/icons/leatherworking.png");
+}
+.village__black-smithing{
+    grid-area: 6 / 4 / 7 / 5;
+}
+.village-card__image--black-smithing{
+    content:url("../images/icons/blacksmith.png");
+}
+.village__army{
+    grid-area: 6 / 6 / 7 / 7;
+}
+.village-card__image--army{
+    content:url("../images/icons/army.png");
+}
+.village-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.village-card__text{
+    font-size: clamp(14px,2vw,28px);
+    text-align: center;
+}
+.village-card__image{
+    width: clamp(40px,4vw,80px);
+    height: auto;
+}
+.village-skill-modal{
+   width: clamp(250px,75vw,650px);
+   height: clamp(250px,75vw,650px);
+    
+}
+.village-skill-modal::backdrop{
+    backdrop-filter:  blur(1px);
+}
+.village-skill-modal__skill-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-large);
+}
+.skill-modal-main-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+.village-skill-modal__upgrades-list{
+    height: 90%;
+}
+.village-skill-modal__skill-name__close-button{
+    position: relative;
+    bottom: 1vh;
+    left: 12vw;
 
+}
+dialog{
+    background-color: var(--background-color);
+    border: 1px solid black;
+    color: var(--font-color);
+}
+.village-skill-modal__upgrades-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

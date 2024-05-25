@@ -2,14 +2,26 @@ import {
   villagePNG,
   woodCuttingPNG,
   miningPNG,
+  blacksmithPNG,
+  leatherworkingPNG,
+  farmingPNG,
+  huntingPNG,
+  armyPNG,
+  craftingPNG,
 } from '../importExportImages/importExportImages';
 
-const currentImage = document.querySelector('.image__icon');
+const currentImage = document.querySelector('.current-skill__icon');
 
 const imageArray = {
   Village: villagePNG,
   'Wood Cutting': woodCuttingPNG,
   Mining: miningPNG,
+  Blacksmith: blacksmithPNG,
+  'Leather Working': leatherworkingPNG,
+  Farming: farmingPNG,
+  Hunting: huntingPNG,
+  Army: armyPNG,
+  Crafting: craftingPNG,
 };
 
 export function editCurrentImage(skill) {
