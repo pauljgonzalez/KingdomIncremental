@@ -1,16 +1,25 @@
 import { villageModal } from '../village/addVillageSkillModal';
+import { woodcuttingModal } from '../village/addWoodcuttingModal';
+import { miningModal } from '../village/addMiningModal';
+import { farmingModal } from '../village/addFarmingModal';
+import { craftingModal } from '../village/addCraftingModal';
+import { huntingModal } from '../village/addHuntingModal';
+import { leatherworkingModal } from '../village/addLeatherworkingModal';
+import { blacksmithingModal } from '../village/addBlacksmithingModal';
+import { armyModal } from '../village/addArmyModal';
 
 const mainScreen = document.querySelector('.main-screen__info');
 const skills = [
   { name: 'village', text: 'Village', func: villageModal },
-  { name: 'woodcutting', text: 'Wood Cutting' },
-  { name: 'mining', text: 'Mining' },
-  { name: 'farming', text: 'Farming' },
-  { name: 'crafting', text: 'Crafting' },
-  { name: 'hunting', text: 'Hunting' },
-  { name: 'leather-working', text: 'Leather Working' },
-  { name: 'black-smithing', text: 'Black Smithing' },
-  { name: 'army', text: 'Army' },
+  { name: 'woodcutting', text: 'Wood Cutting', func: woodcuttingModal },
+  { name: 'mining', text: 'Mining', func: miningModal },
+  { name: 'farming', text: 'Farming', func: farmingModal },
+  { name: 'crafting', text: 'Crafting', func: craftingModal },
+  { name: 'hunting', text: 'Hunting', func: huntingModal },
+  // eslint-disable-next-line prettier/prettier
+  { name: 'leather-working', text: 'Leather Working', func: leatherworkingModal },
+  { name: 'blacksmith', text: 'Blacksmith', func: blacksmithingModal },
+  { name: 'army', text: 'Army', func: armyModal },
 ];
 let index = 0;
 

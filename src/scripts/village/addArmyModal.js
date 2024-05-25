@@ -1,6 +1,6 @@
 import { openDynamicModal } from '../modalSkillTemplate/modals';
 
-export function villageModal() {
-  const modal = openDynamicModal('Village');
+export function armyModal() {
+  const modal = openDynamicModal('Army');
   return modal;
 }

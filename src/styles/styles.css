@@ -168,10 +168,10 @@ body{
 .village-card__image--leather-working{
     content:url("../images/icons/leatherworking.png");
 }
-.village__black-smithing{
+.village__blacksmith{
     grid-area: 6 / 4 / 7 / 5;
 }
-.village-card__image--black-smithing{
+.village-card__image--blacksmith{
     content:url("../images/icons/blacksmith.png");
 }
 .village__army{
