@@ -216,22 +216,42 @@ body{
     background-color: var(--background-color);
 }
 .village-skill-modal__upgrades-list{
-    height: 90%;
+    height: 100%;
 }
 .village-skill-modal__skill-name__close-button{
     position: relative;
     bottom: 1vh;
     left: 12vw;
-
 }
-dialog{
+.village-skill-modal{
     background-color: var(--background-color);
     border: 1px solid black;
     color: var(--font-color);
+    animation: show .75s ease normal;
 }
 .village-skill-modal__upgrades-list{
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
+  @keyframes show {
+    from {
+      transform: translateY(-180%);
+    }
+    to {
+      transform: translateY(0%);
+    }
+  }
+  .village-skill-modal--hide {
+    animation: hide .75s ease normal;
+  }
+  
+  @keyframes hide {
+    from {
+      transform: translateY(0%);
+    }
+    to {
+      transform: translateY(-180%);
+    }
+  }
+  
