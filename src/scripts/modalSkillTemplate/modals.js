@@ -1,4 +1,4 @@
-export function openDynamicModal(skill) {
+export function openDynamicModal(skill, upgradesItems, className) {
   // Create dialog element
   const modal = document.createElement('dialog');
   modal.classList = 'village-skill-modal';
@@ -32,12 +32,10 @@ export function openDynamicModal(skill) {
 
   // make upgrades container
   const upgradeContainer = document.createElement('div');
-  upgradeContainer.className = 'village-skill-modal__upgrades-list';
+  upgradeContainer.className = `village-skill-modal__upgrades-list ${className}`;
 
   // make inner container
-  const upgrades = document.createElement('div');
-  upgrades.className = 'village-skill-modal__upgrades-list__upgrade';
-  upgrades.innerHTML = 'this is where upgrades go';
+  const upgrades = upgradesItems;
 
   // append upgrades to conatiner
   upgradeContainer.appendChild(upgrades);

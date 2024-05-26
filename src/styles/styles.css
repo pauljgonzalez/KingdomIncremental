@@ -256,28 +256,27 @@ body{
     }
   }
 
-
-  .test{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: repeat(3, 1);
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  .one{
+.village-skill-modal__upgrades-list--village{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+  .village-upgrade-card--era{
     grid-area: 2 / 3 / 3 / 4; 
   }
-  .two{
+  .village-upgrade-card--roads{
     grid-area: 1 / 2 / 2 / 3;
   }
-  .three{
+  .village-upgrade-card--housing{
     grid-area: 1 / 4 / 2 / 5;
   }
-  .four{
+  .village-upgrade-card--defenses{
     grid-area: 3 / 2 / 4 / 3; 
   }
-  .five{
+  .village-upgrade-card--reaserch{
     grid-area: 3 / 4 / 4 / 5; 
   }
   .village-upgrade-card{
@@ -285,7 +284,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: clamp(0px,1%,5px);
     height: 100%;
     width: 100%;
   }
@@ -305,15 +304,18 @@ body{
   }
   .list__item{
     text-align: center;
-    font-size: clamp(10px,2vw,24px);
+    font-size: clamp(12px,2vw,18px);
   }
   .village-upgrade__title{
-    font-size: clamp(14px,4vw,32px);
+    font-size: clamp(12px,3vw,24px);
+    font-weight:  bold;
+    text-decoration: underline;
   }
   .village-upgrade__desc{
-    font-size: clamp(10px,2vw,24px);
+    font-size: clamp(12px,2vw,18px);
+    width: 15ch;
   }
   .village-upgrade__image{
-    height: 24px;
+    height: clamp(24px,3vw,64px);
     width: auto;
   }
