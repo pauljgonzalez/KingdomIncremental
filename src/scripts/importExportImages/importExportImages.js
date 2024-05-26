@@ -7,6 +7,7 @@ import farmingPNG from '../../images/icons/farming.png';
 import huntingPNG from '../../images/icons/hunting.png';
 import armyPNG from '../../images/icons/army.png';
 import craftingPNG from '../../images/icons/crafting.png';
+import testPNG from '../../images/skillUpgrades/test.png';
 
 export {
   villagePNG,
@@ -18,4 +19,5 @@ export {
   huntingPNG,
   armyPNG,
   craftingPNG,
+  testPNG,
 };

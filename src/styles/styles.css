@@ -11,6 +11,8 @@
     --background-color:#23243B;
     --padding-width-main-screen:clamp(10px,2vw,100px);
     --font-size-large:clamp(20px,5vw,30px);
+    --font-size-medium:clamp(14px,4vw,20px);
+    --font-size-small:clamp(8px,4vw,12px);
     }
 body{
     margin: 0;
@@ -118,7 +120,6 @@ body{
     grid-area: 2 / 1 / 3 / 2;
     background-color:  var(--background-color);
     height: 100%;
-    
 }
 .main-screen__info--village{
     display: grid;
@@ -243,7 +244,7 @@ body{
     }
   }
   .village-skill-modal--hide {
-    animation: hide .75s ease normal;
+    animation: hide .50s ease normal;
   }
   
   @keyframes hide {
@@ -251,6 +252,68 @@ body{
       transform: translateY(0%);
     }
     to {
-      transform: translateY(-180%);
+      transform: translateY(-160%);
     }
+  }
+
+
+  .test{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .one{
+    grid-area: 2 / 3 / 3 / 4; 
+  }
+  .two{
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .three{
+    grid-area: 1 / 4 / 2 / 5;
+  }
+  .four{
+    grid-area: 3 / 2 / 4 / 3; 
+  }
+  .five{
+    grid-area: 3 / 4 / 4 / 5; 
+  }
+  .village-upgrade-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 100%;
+    width: 100%;
+  }
+  .village-upgrade__cost{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .cost__list{
+    padding: 0;
+    list-style-type: none;
+    
+  }
+  .cost__buy{
+    align-self: center;
+    font-size: var(--font-size-small);
+  }
+  .list__item{
+    text-align: center;
+    font-size: clamp(10px,2vw,24px);
+  }
+  .village-upgrade__title{
+    font-size: clamp(14px,4vw,32px);
+  }
+  .village-upgrade__desc{
+    font-size: clamp(10px,2vw,24px);
+  }
+  .village-upgrade__image{
+    height: 24px;
+    width: auto;
   }

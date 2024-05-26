@@ -7,6 +7,7 @@ import { huntingModal } from '../village/addHuntingModal';
 import { leatherworkingModal } from '../village/addLeatherworkingModal';
 import { blacksmithingModal } from '../village/addBlacksmithingModal';
 import { armyModal } from '../village/addArmyModal';
+import { removeMainScreenInfo } from './removeMainChildren';
 
 const mainScreen = document.querySelector('.main-screen__info');
 const skills = [
@@ -47,6 +48,7 @@ function addEvent(container, func) {
 }
 
 export function changeVillageDOM() {
+  removeMainScreenInfo();
   mainScreen.style.opacity = 0;
   const frag = new DocumentFragment();
   mainScreen.className = 'main-screen__info main-screen__info--village';
@@ -62,29 +64,8 @@ export function changeVillageDOM() {
   mainScreen.append(frag);
   index = 0;
   setTimeout(() => {
-    mainScreen.animate([{ opacity: 0 }, { opacity: 1 }], 1000);
+    mainScreen.animate([{ opacity: 0 }, { opacity: 1 }], 750);
     mainScreen.style.opacity = 1;
   }, 200);
 }
-// have to remove children of mainScreen still
-
-// export function changeVillageDOM() {
-//   mainScreen.style.visibility = 'hidden';
-//   const frag = new DocumentFragment();
-//   mainScreen.className = 'main-screen__info main-screen__info--village';
-//   skills.forEach(({ name, text, func }) => {
-//     const container = createContainer(name);
-//     const textElement = createText(text);
-//     const image = createImage(name);
-//     addEvent(container, func);
-//     container.append(textElement, image);
-//     frag.append(container);
-//     index += 1;
-//   });
-//   mainScreen.append(frag);
-//   index = 0;
-//   setTimeout(() => {
-//     mainScreen.style.visibility = 'visible';
-//   }, 200);
-// }
 // // have to remove children of mainScreen still
