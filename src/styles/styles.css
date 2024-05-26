@@ -216,13 +216,11 @@ body{
     flex-direction: column;
     background-color: var(--background-color);
 }
-.village-skill-modal__upgrades-list{
-    height: 100%;
-}
 .village-skill-modal__skill-name__close-button{
     position: relative;
     bottom: 1vh;
-    left: 12vw;
+    left: 10vw;
+    align-self: flex-end;
 }
 .village-skill-modal{
     background-color: var(--background-color);
@@ -231,6 +229,7 @@ body{
     animation: show .75s ease normal;
 }
 .village-skill-modal__upgrades-list{
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,19 +263,19 @@ body{
   justify-content: center;
   text-align: center;
 }
-  .village-upgrade-card--era{
+  .village-upgrade-card--center{
     grid-area: 2 / 3 / 3 / 4; 
   }
-  .village-upgrade-card--roads{
+  .village-upgrade-card--top-left{
     grid-area: 1 / 2 / 2 / 3;
   }
-  .village-upgrade-card--housing{
+  .village-upgrade-card--top-right{
     grid-area: 1 / 4 / 2 / 5;
   }
-  .village-upgrade-card--defenses{
+  .village-upgrade-card--bottom-left{
     grid-area: 3 / 2 / 4 / 3; 
   }
-  .village-upgrade-card--reaserch{
+  .village-upgrade-card--bottom-right{
     grid-area: 3 / 4 / 4 / 5; 
   }
   .village-upgrade-card{
@@ -319,3 +318,7 @@ body{
     height: clamp(24px,3vw,64px);
     width: auto;
   }
+.village-skill-modal__skill-name__text{
+  position: relative;
+  left: clamp(5%, .5%, 100%);
+}

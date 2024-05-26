@@ -1,6 +1,12 @@
 import { openDynamicModal } from '../modalSkillTemplate/modals';
+import { createUpgrades } from '../villageSkillUpgrades/armyUpgrades';
 
 export function armyModal() {
-  const modal = openDynamicModal('Army');
+  const upgrades = createUpgrades();
+  const modal = openDynamicModal(
+    'Wood Cutting',
+    upgrades,
+    'village-skill-modal__upgrades-list--village',
+  );
   return modal;
 }

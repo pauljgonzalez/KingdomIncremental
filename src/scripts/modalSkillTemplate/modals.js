@@ -11,7 +11,7 @@ export function openDynamicModal(skill, upgradesItems, className) {
 
   // Create content for skill name and close button
   const skillName = document.createElement('div');
-  skillName.class = 'village-skill-modal__skill-name__text';
+  skillName.className = 'village-skill-modal__skill-name__text';
   skillName.textContent = skill;
 
   // Create close button
