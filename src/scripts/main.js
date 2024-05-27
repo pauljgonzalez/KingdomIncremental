@@ -5,6 +5,7 @@ import { changeVillageDOM } from './editMainInfoDOM/addVillage';
 import { openDynamicModal } from './modalSkillTemplate/modals';
 import { testPNG } from './importExportImages/importExportImages';
 import { createUpgrades } from './villageSkillUpgrades/villageUpgrades';
+import { mainScreenInfoSkill } from './editMainInfoDOM/skillTemplate';
 
 document.querySelector('.current-skill__icon').src = icon;
 const villageSelect = document.querySelector('.individual__village');
@@ -21,3 +22,5 @@ const testImage = document.querySelectorAll('.skill-card__image');
 testImage.forEach((image) => {
   image.src = testPNG;
 });
+
+console.log(mainScreenInfoSkill());
