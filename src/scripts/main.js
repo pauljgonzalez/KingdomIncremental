@@ -15,4 +15,9 @@ villageSelect.addEventListener('click', () => {
 });
 // eslint-disable-next-line prettier/prettier
 
-changeVillageDOM();
+// changeVillageDOM();
+
+const testImage = document.querySelectorAll('.skill-card__image');
+testImage.forEach((image) => {
+  image.src = testPNG;
+});
