@@ -31,5 +31,23 @@ export function createButton(className, innerHtml) {
   if (innerHtml !== undefined) {
     button.textContent = innerHtml;
   }
+  button.type = 'button';
   return button;
+}
+export function createLabel(forName, className, innerHtml) {
+  const label = document.createElement('Label');
+  label.htmlFor = forName;
+  label.className = className;
+  if (innerHtml !== undefined) {
+    label.textContent = innerHtml;
+  }
+  return label;
+}
+export function createProgrssBar(idName, value, maxValue, className) {
+  const progress = document.createElement('progress');
+  progress.id = idName;
+  progress.value = value;
+  progress.max = maxValue;
+  progress.className = className;
+  return progress;
 }

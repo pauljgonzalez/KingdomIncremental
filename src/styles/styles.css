@@ -327,7 +327,7 @@ body{
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  gap: 48px;
+  gap: 16px;
   height: 82vh;
   overflow-y: auto;
  }
@@ -413,4 +413,17 @@ body{
   display: flex;
   gap: 10px;
  justify-content: center  ;
+}
+.progress-bar{
+  width: clamp(150px,35vw,1000px);
+  height: 30px;
+  -webkit-appearance: none;
+}
+.progress-bar::-webkit-progress-bar{
+  background-color: lightgray;
+  border-radius: 16px;
+}
+.progress-bar::-webkit-progress-value{
+  background-color: var(--button-background-color);
+  border-radius: 12px;
 }

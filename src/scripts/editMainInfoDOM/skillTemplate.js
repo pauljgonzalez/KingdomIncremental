@@ -2,6 +2,8 @@ import {
   createButton,
   createDiv,
   createImage,
+  createLabel,
+  createProgrssBar,
 } from '../createDOMElements/createElements';
 import { testPNG } from '../importExportImages/importExportImages';
 
@@ -10,7 +12,7 @@ export function mainScreenInfoSkill() {
   // have to pass in current and lifetime XP
   const xpContainer = createXPContainer();
   const skillUpgradesContainer = createDiv(
-    '.flex-wrap main-screen-skill__skill-upgrades',
+    'flex-wrap main-screen-skill__skill-upgrades',
   );
   // TODO have to pass in title ddesc, and cost
   const firstUpgrade = createSkillUpgrade();
@@ -58,8 +60,8 @@ function createSkillUpgrade() {
 // TODO think i have to pass in current tic speed and current max speed to get progrss bar to work
 function createTicProgressBar() {
   const container = createDiv('main-screen-skill__tic');
-  const title = createDiv('tic__title', 'Current Harvest');
-  const progressBar = createDiv('progress-bar', 'Bar that shows tic speed');
+  const title = createLabel('progress-bar', 'tic__title', 'Current Harvest');
+  const progressBar = createProgrssBar('progress-bar', 4, 15, 'progress-bar');
   container.append(title, progressBar);
   return container;
 }
